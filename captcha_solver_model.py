@@ -103,7 +103,8 @@ num_to_char = {'0':'2','1':'3','2':'4','3':'5','4':'6','5':'7','6':'8','7':'b','
 nrow = 1
 fig=plt.figure(figsize=(20, 5))
 for i in range(0,10):
-    if i>4: nrow = 2
+    if i>4:
+        nrow = 2
     fig.add_subplot(nrow, 5, i+1)
     plt.imshow(np.rot90(X_val[i], k = 1),cmap='gray')
     plt.title('Prediction : ' + str(list(map(lambda x:num_to_char[str(x)], y_pred[i]))))
